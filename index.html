@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f7faff" />
+  <meta name="description" content="William Wang — SJTU undergraduate exploring AI, robotics, research, and building useful products." />
+  <meta property="og:title" content="William Wang · 王籽阳" />
+  <meta property="og:description" content="Stay curious. Make things happen." />
+  <title>William Wang · 王籽阳 — Personal Website</title>
+  <!-- V3 headline styling: clean sans-serif hero and serif About heading. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+
+:root{--bg:#f7faff;--ink:#20344d;--navy:#1b344e;--muted:#758399;--blue:#75b6e8;--blue-deep:#3b83bf;--ice:#c6e8ff;--pale:#e9f5ff;--line:#e1eaf4;--serif:'Playfair Display','Georgia','Songti SC',serif;--sans:'DM Sans','Inter','PingFang SC','Microsoft YaHei',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px;overflow-x:clip}body{font-family:var(--sans);background:var(--bg);color:var(--ink);margin:0;overflow-x:clip;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #4da8e8;outline-offset:4px}button svg,a svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}h1,h2,h3,p{margin-top:0}button{border:0}.wrap{width:min(1330px,calc(100% - 140px));margin:auto}.section{padding:120px 0}.section-title{font-size:clamp(49px,6.1vw,87px);line-height:1.13;letter-spacing:-.074em;font-weight:650;margin:28px 0 0}.section-title em{font-family:var(--serif);font-weight:500;color:var(--blue-deep);letter-spacing:-.055em}.title-dot{color:var(--blue-deep)}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.18em;display:flex;align-items:center;gap:12px;color:#5a86a7}.eyebrow .spark{font-size:22px;color:var(--blue-deep);font-weight:400;line-height:1}.eyebrow-light{color:#99b9d2}.eyebrow-light .spark{color:#92c5f1}
+/* Header */
+.site-header{height:88px;border-bottom:1px solid #e4ebf3;position:sticky;top:0;background:#f7faffed;backdrop-filter:blur(17px);z-index:45}.header-layout{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:15px;flex:none}.brand-icon{width:46px;height:46px;background:var(--navy);border-radius:13px;color:white;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:29px;font-weight:bold;letter-spacing:-.08em}.brand-icon span{color:#8dcbf3}.brand-name{font-size:11px;letter-spacing:.16em;font-weight:850;white-space:nowrap}.brand-name i{font-style:normal;color:#9aa7b2;font-size:9px;letter-spacing:.06em;font-weight:500}.main-nav{display:flex;align-items:center;gap:25px;margin-left:auto}.main-nav a{font-size:11px;color:#67788a;white-space:nowrap;transition:color .15s}.main-nav a:hover{color:#257ab8}.header-actions{display:flex;align-items:center;gap:12px}.language-toggle{height:35px;padding:0 15px;background:transparent;border:1px solid #d7e2ec;border-radius:22px;display:flex;align-items:center;gap:10px;font-size:10px;font-weight:750}.language-toggle svg{width:15px;height:15px}.language-toggle:hover{background:#e9f4fb}.header-email{height:38px;width:38px;background:#b6ddf9;display:grid;place-items:center;border-radius:50%;transition:transform .2s}.header-email:hover{transform:translateY(-3px)}.menu-button{display:none;background:transparent;width:36px;height:36px;align-items:center;justify-content:center}
+/* Hero */
+.hero{min-height:760px;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:60px;position:relative;padding-top:45px;padding-bottom:100px}.hero-copy{position:relative;z-index:2}.hero-overline{font-size:10px;letter-spacing:.12em;color:#8193a0;font-weight:700;display:flex;align-items:center;gap:13px}.hero-overline>span{height:2px;width:24px;background:var(--blue-deep)}.hero-hello{font-size:17px;font-weight:450;margin-top:43px;display:flex;gap:12px;align-items:center}.hero-hello .mini-star{font-size:26px;color:#6eaeda}.blue-stop{color:var(--blue-deep);margin-left:-10px}.hero h1{font-size:clamp(60px,6.5vw,100px);font-weight:620;line-height:1.12;letter-spacing:-.09em;margin:16px 0 35px;white-space:nowrap}.hero h1 em{font-style:normal;color:#6aabe0;letter-spacing:-.085em}.hero-intro{font-size:16px;line-height:1.9;color:#6e7f90;max-width:520px;margin-bottom:35px}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{height:51px;display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:0 24px;border-radius:7px;font-size:12px;font-weight:700;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-dark{background:#1c354e;color:#fff}.btn-dark:hover{background:#2d5577}.btn-outline{border:1px solid #cbdce9;background:transparent}.btn-outline:hover{background:white}.hero-location{display:flex;align-items:center;gap:10px;margin-top:54px;color:#9aa8b3;font-size:10px;letter-spacing:.08em}.location-pin{font-size:20px;color:#7ca7c4}.hero-visual{position:relative;height:565px;min-width:0;display:grid;place-items:center}.hero-graphic{position:relative;width:100%;height:100%;max-width:550px}.cosmos-grid{position:absolute;inset:35px 5px;background-image:linear-gradient(#9bc8e51f 1px,transparent 1px),linear-gradient(90deg,#9bc8e51f 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 75%)}.cosmos-orbit{position:absolute;border:1px solid #9bc7e3;border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%) rotate(-26deg)}.orbit-one{width:420px;height:420px;border-style:dashed}.orbit-two{width:520px;height:230px;transform:translate(-50%,-50%) rotate(-27deg);border-color:#75b3db}.cosmos-center{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%) rotate(-9deg);height:288px;width:288px;border-radius:50%;background:linear-gradient(145deg,#cdeaff 0,#92cbf3 62%,#64a5df 100%);box-shadow:30px 38px 55px #82b8df48,inset -18px -20px 40px #569ed129, inset 15px 17px 30px #ffffffa8;display:flex;align-items:center;justify-content:center;flex-direction:column}.cosmos-center strong{font-size:41px;line-height:1.07;letter-spacing:-.085em;text-align:center;color:#1c4467;font-weight:800}.cosmos-center strong span{color:white}.cosmos-center small{font-size:7px;letter-spacing:.2em;font-weight:850;color:#46779b;margin-top:16px}.cosmos-star{font-size:36px;color:white;margin-bottom:10px}.cosmos-ticket{position:absolute;z-index:3;display:flex;align-items:center;gap:13px;background:#fff;padding:13px 16px;box-shadow:0 18px 35px #416e9020;border:1px solid #e1f0fb;transform:rotate(7deg)}.cosmos-ticket i{font-style:normal;font-size:10px;color:#6ba7d5}.cosmos-ticket span{font-size:10px;letter-spacing:.09em;font-weight:850;white-space:nowrap}.cosmos-ticket b{font-size:14px;color:#5599d0}.ticket-top{right:-1%;top:15%;transform:rotate(9deg)}.ticket-bottom{left:0;bottom:19%;transform:rotate(-8deg)}.cosmos-dot{position:absolute;border-radius:50%;background:#7ebceb;box-shadow:0 0 0 9px #8dc6ed30}.dot-one{height:12px;width:12px;left:6%;top:21%}.dot-two{height:18px;width:18px;right:8%;bottom:18%;background:#aeddf8}.cosmos-cross{position:absolute;color:#82b8d9;font-size:26px;font-weight:200}.cross-one{right:2%;top:39%}.cross-two{left:15%;bottom:13%}.cosmos-corner{position:absolute;bottom:5%;right:11%;font-size:8px;letter-spacing:.18em;color:#839bad;font-weight:750;display:flex;gap:15px}.hero-handnote{position:absolute;top:0;right:1%;display:flex;flex-direction:column;font-family:var(--serif);font-style:italic;font-size:21px;color:#47799a;transform:rotate(5deg);text-align:center}.hero-handnote>span{color:#70aedd;font-family:serif;font-style:normal;font-size:30px}.hero-handnote svg{margin-left:auto;margin-right:2px;width:56px;stroke:#47799a;stroke-width:1.5;fill:none}.scroll-cue{position:absolute;left:0;bottom:35px;display:flex;align-items:center;gap:17px;font-size:10px;color:#9baab7;letter-spacing:.13em}.scroll-cue svg{width:16px}.ticker{height:58px;background:#cbe9fd;overflow:hidden}.ticker>div{height:100%;display:flex;align-items:center;justify-content:space-around;gap:30px;white-space:nowrap;min-width:1380px;font-size:11px;font-weight:850;letter-spacing:.17em;color:#315f80}.ticker span{font-size:18px;color:#7fb7dc;font-weight:400}
+/* About */
+.about{background:#fff}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:105px}.about .section-title{font-size:clamp(46px,5.3vw,77px)}.about-paragraphs{margin-top:35px;max-width:650px}.about-paragraphs p{font-size:15px;line-height:2.05;color:#66788a;margin:0 0 19px}.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}.tag-cloud span{padding:9px 13px;background:#f1f7fd;border:1px solid #e3eef7;border-radius:5px;color:#6582a0;font-size:11px;font-weight:650}.about-aside{padding-top:50px;display:flex;flex-direction:column;gap:17px}.education-card{min-height:316px;padding:32px;background:#e9f5fe;position:relative;overflow:hidden}.education-icon{position:absolute;font-size:110px;top:-29px;right:12px;line-height:1;color:#b9dff7}.education-caption{font-size:9px;letter-spacing:.16em;color:#8eabc1;font-weight:800}.education-card h3{font-size:27px;letter-spacing:-.035em;margin:85px 0 10px}.education-card p{font-size:12px;color:#637e94}.education-prior{font-size:11px;color:#92a8b8;margin-top:10px}.education-brand{border-top:1px solid #c9dfef;padding-top:16px;margin-top:21px;font-family:Georgia,serif;font-weight:800;display:flex;justify-content:space-between;letter-spacing:.07em}.education-brand span{font-family:var(--sans);color:#619ccc}.quote-card{border:1px solid var(--line);padding:26px 31px 16px}.quote-card>span{color:#94a8ba;font-size:10px;letter-spacing:.09em}.quote-card p{font-size:26px;font-family:var(--serif);font-style:italic;margin:20px 0 0}.quote-card>div{color:#8ebfe0;font-family:serif;font-size:25px;letter-spacing:6px;text-align:right}
+/* Projects */
+.projects{background:#f0f7fd}.section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:50px;margin-bottom:37px}.section-header>p{max-width:340px;color:#8193a3;font-size:14px;line-height:1.85;margin-bottom:10px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}.filter{padding:11px 18px;border:1px solid #dce9f5;border-radius:24px;background:#ffffff8c;color:#8095a9;font-size:11px;font-weight:720}.filter.active{background:#234767;color:#fff;border-color:#234767}.filter:hover:not(.active){background:white;color:#335a77}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}.project-card{min-width:0;background:#fff;overflow:hidden;display:flex;flex-direction:column;border:1px solid #e2ecf6;transition:transform .2s,box-shadow .2s}.project-card:hover{transform:translateY(-3px);box-shadow:0 22px 40px #4a7eae12}.project-graphic{height:310px;overflow:hidden}.project-body{padding:28px 31px 25px;flex:1;display:flex;flex-direction:column}.project-category{display:flex;justify-content:space-between;align-items:center;color:#89a0b3;font-size:10px;font-weight:800;letter-spacing:.13em}.project-marker{font-size:17px;color:#8bbde1}.project-title-row{display:flex;align-items:center;gap:14px;justify-content:space-between}.project-title-row h3{font-size:30px;letter-spacing:-.055em;margin:12px 0}.project-round{height:34px;width:34px;flex:none;border-radius:50%;border:1px solid #d4e2ec;background:transparent;display:grid;place-items:center}.project-round:hover{background:#e8f5ff}.project-round svg{width:17px;height:17px}.project-body>p{font-size:13px;line-height:1.85;color:#75889a;max-width:570px;min-height:49px;margin-bottom:19px}.project-tags{display:flex;flex-wrap:wrap;gap:7px}.project-tags span{font-size:10px;color:#6c93b4;background:#eaf5fc;border-radius:3px;padding:6px 9px}.project-bottom{margin-top:auto;padding-top:23px;display:flex;justify-content:space-between;align-items:center;gap:15px}.project-bottom>span{font-size:10px;color:#9badba}.simple-link{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:750;color:#325b79;background:none;padding:0}.simple-link:hover{text-decoration:underline}.simple-link svg{width:15px}.art-bg{height:100%;width:100%;position:relative;overflow:hidden}.visual-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff17 1px,transparent 1px),linear-gradient(90deg,#ffffff17 1px,transparent 1px);background-size:28px 28px}.art-fbti{background:#aadcf5}.fbti-type{position:absolute;top:25%;left:10%;font-weight:850;color:#1f4f74;line-height:1.05;letter-spacing:-.07em;font-size:clamp(37px,4vw,60px)}.fbti-type span{color:white}.art-mini{position:absolute;left:10%;top:12%;font-size:9px;letter-spacing:.18em;font-weight:800;color:#6493af}.food{position:absolute;font-size:55px;filter:drop-shadow(0 8px 6px #5a97bd30)}.f1{right:13%;top:13%;transform:rotate(18deg)}.f2{right:23%;bottom:7%;transform:rotate(-22deg)}.f3{right:7%;bottom:19%;font-size:47px}.art-bottom{position:absolute;left:10%;bottom:12%;border-bottom:1px solid #568eb0;color:#5f89a8;padding-bottom:6px;letter-spacing:.13em;font-size:9px;font-weight:800}.art-bottom span{margin-left:20px;font-size:16px}.art-summary{background:#d9eefa}.paper-shadow{width:255px;height:200px;position:absolute;left:49%;top:53%;transform:translate(-50%,-50%) rotate(9deg);background:#a2cbe6;box-shadow:10px 10px 20px #7cafd139}.grade-sheet{position:absolute;width:285px;height:239px;left:49%;top:50%;transform:translate(-50%,-50%) rotate(-8deg);background:#fff;padding:21px 23px;box-shadow:0 18px 28px #85b0cb55}.grade-top{display:flex;justify-content:space-between;align-items:center;font-size:8px;color:#7194a9;letter-spacing:.07em;font-weight:800}.grade-top span{background:#e5f5ff;padding:6px}.grade-sheet>b{display:block;font-size:29px;letter-spacing:-.08em;color:#365e7b;line-height:1.16;margin:23px 0}.p-line{height:6px;background:#e6f2f8;border-radius:4px;margin-bottom:9px}.l1{width:95%}.l2{width:72%}.l3{width:86%}.feedback-dot{position:absolute;right:34px;bottom:29px;font-size:38px;color:#79b8e1}.feed-panel{position:absolute;bottom:27px;left:21px;font-size:9px;font-weight:700;color:#4e8ab7}.score-chip{position:absolute;right:8%;bottom:16%;transform:rotate(8deg);padding:15px;background:#acd7f4;font-weight:850;font-size:11px;color:#2c648c;box-shadow:8px 10px 15px #8bb9d63a}.score-chip span{font-size:15px}.art-hbti{background:#cae6f8}.hbti-top{position:absolute;top:14%;left:9%;font-size:10px;letter-spacing:.18em;color:#718fa6;font-weight:800}.hbti-big{position:absolute;top:32%;left:11%;font-size:clamp(82px,10vw,142px);letter-spacing:-.085em;color:#2e668d;line-height:.8}.hbti-big span{font-size:.33em;vertical-align:top;color:#fff;position:relative;left:5px;top:-11px}.hbti-small{position:absolute;left:11%;bottom:19%;font-size:10px;letter-spacing:.16em;color:#648fac;font-weight:800}.hbti-chip{position:absolute;background:white;padding:11px 17px;border-radius:23px;font-size:12px;color:#5a89a9;box-shadow:0 8px 17px #77a9c83b}.hc1{right:7%;top:18%;transform:rotate(11deg)}.hc2{right:10%;bottom:11%;transform:rotate(-13deg)}.art-nbati{background:#e2f0ff}.art-nbati>strong{font-size:clamp(80px,8.8vw,132px);letter-spacing:-.09em;position:absolute;top:32%;left:10%;color:#3f7eb6;line-height:1}.art-nbati>strong span{font-size:.4em;color:#9fcbeb;vertical-align:top;position:relative;top:-.27em}.art-nbati>p{position:absolute;bottom:15%;left:12%;color:#7ea4c7;font-size:11px;letter-spacing:.15em;font-weight:850;line-height:1.8}.nbati-ring{position:absolute;border:1px solid #91b8d8;border-radius:50%}.n1{width:230px;height:230px;right:-40px;top:-92px}.n2{width:320px;height:320px;right:-100px;top:-146px}.nbati-sticker{position:absolute;right:10%;bottom:10%;width:107px;height:107px;background:#a7d4f3;border:2px solid white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;transform:rotate(13deg);color:#2e628e}.nbati-sticker b{font-size:24px}.nbati-sticker small{font-size:8px;letter-spacing:.12em}.art-duo{background:#e7e2f4}.diary-circle{height:390px;width:390px;border:1px solid #cbc3df;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);position:absolute}.diary{width:205px;height:205px;background:#fffbfc;position:absolute;box-shadow:15px 18px 23px #6c60832b;display:flex;flex-direction:column;padding:23px;justify-content:space-between}.diary small{font-size:8px;color:#8c84a0;letter-spacing:.14em}.diary b{font-size:25px;letter-spacing:-.06em;line-height:1.12;color:#4c5276}.diary i{align-self:flex-end;color:#ce9eaf;font-size:24px}.d1{top:13%;left:20%;transform:rotate(-10deg)}.d2{top:28%;right:18%;transform:rotate(10deg)}.d2 i{color:#a59bcc}.duo-bottom{position:absolute;bottom:8%;left:10%;font-size:9px;letter-spacing:.2em;color:#9088a8;font-weight:750}.art-star{background:#deedfc}.star-orbit{position:absolute;width:350px;height:350px;border:1px dashed #8ebde6;border-radius:50%;right:-5%;top:-35%}.star-symbol{position:absolute;top:3%;right:8%;font-size:170px;color:#8dc3ed}.star-copy{position:absolute;left:10%;bottom:12%;display:flex;flex-direction:column;gap:13px}.star-copy small{font-size:9px;letter-spacing:.18em;color:#718fac;font-weight:850}.star-copy strong{font-size:40px;line-height:1.08;color:#376c98;letter-spacing:-.07em}.star-copy>span{font-size:9px;letter-spacing:.11em;color:#87a1b5}.art-robot{background:#263f5b}.robot-top{position:absolute;top:10%;left:9%;font-size:9px;font-weight:850;letter-spacing:.2em;color:#87b9df}.robot-sketch{position:absolute;width:72%;height:85%;top:8%;left:14%}.robot-foot{position:absolute;bottom:9%;left:9%;color:#a3c6e0;font-size:9px;font-weight:800;letter-spacing:.16em}
+/* Awards */
+.competitions{background:#fff}.section-header.compact{margin-bottom:45px}.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px 55px;align-items:start}.award-group{border-top:1px solid #dce5ee;padding-top:19px}.award-group-title{display:flex;align-items:center;gap:11px;padding-bottom:14px}.award-group-title h3{font-size:17px;letter-spacing:-.025em;margin:0}.award-symbol{display:grid;place-items:center;height:29px;width:29px;border-radius:8px;background:#e8f4fd;color:#548ebc;font-size:15px;font-weight:800}.award-count{font-size:10px;color:#a5b4c0;margin-left:auto;font-weight:750}.award-row{display:grid;grid-template-columns:60px minmax(0,1fr) auto;gap:11px;align-items:start;padding:13px 0;border-bottom:1px solid #eff3f6}.award-year{font-size:11px;color:#93a6b5;font-weight:700;padding-top:2px}.award-name{font-size:12px;color:#536b80;line-height:1.6}.award-result{padding:5px 8px;background:#e6f3fd;border-radius:3px;color:#4e8cbd;font-size:10px;font-weight:750;white-space:nowrap}.award-arrow{color:#8caec6}.awards-footnote{font-size:11px;color:#a4b1bd;margin:35px 0 0}.award-group:last-child{grid-column:1/-1;max-width:calc(50% - 27px)}
+/* Experience */
+.experience{background:#f1f8fd}.experience-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:100px}.experience-lead>p{font-size:15px;color:#788da0;line-height:1.8;margin-top:25px}.experience-sketch{font-family:var(--serif);font-size:110px;color:#b3dbf4;transform:rotate(-23deg);margin:20px 0 0 60px}.experience-sketch span{font-size:75px;margin-left:-18px}.experience-list{padding-top:22px}.experience-item{border-top:1px solid #d7e4ee;padding:27px 0 31px}.experience-number{font-size:10px;letter-spacing:.14em;color:#8bacc3;font-weight:800}.experience-item h3{font-size:24px;letter-spacing:-.045em;margin:15px 0 10px}.experience-item strong{font-size:12px;color:#4d8ab8;font-weight:750}.experience-item>p{font-size:13px;line-height:1.9;color:#718699;max-width:580px;margin:17px 0 18px}.experience-tag{color:#9bb3c5;font-size:9px;letter-spacing:.13em;display:flex;justify-content:space-between;font-weight:800}.experience-tag svg{width:15px;height:15px}
+/* Research */
+.research{background:#1c3650;color:#fff;overflow:hidden}.research-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}.research .section-title{font-size:clamp(54px,5.5vw,80px);color:#f6fbff}.research .section-title em{color:#91cbf3}.research-lead>p{font-size:14px;line-height:2;color:#a9c0d2;max-width:480px;margin:35px 0 0}.research-orbit{font-size:205px;color:#42698b;line-height:.9;transform:rotate(-23deg);margin:40px 0 -125px 80px}.research-list{padding-top:16px}.research-topic{border-top:1px solid #4e6376;padding:24px 0 29px}.research-top{font-size:10px;color:#82aacc;letter-spacing:.16em;display:flex;justify-content:space-between;font-weight:850}.research-topic h3{font-size:26px;letter-spacing:-.06em;margin:18px 0 13px}.research-topic p{font-size:13px;color:#b7c9d7;line-height:1.9;margin-bottom:0}.research-disclaimer{border-top:1px solid #4e6376;padding-top:22px;color:#8babc4;font-size:10px;letter-spacing:.07em}
+/* Life */
+.life{background:#fff}.life-header{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:45px}.life-header>p{font-size:14px;line-height:1.9;color:#8293a0;max-width:405px;margin-bottom:7px}.life-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.life-card{min-width:0}.life-art{position:relative;height:330px;overflow:hidden}.life-basketball .life-art{background:#ddeefa}.life-drums .life-art{background:#dee9f7}.life-travel .life-art{background:#e6f4fe}.life-num{position:absolute;left:22px;top:19px;font-size:10px;font-weight:800;color:#91abc0}.life-symbol{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%) rotate(-13deg);font-family:var(--serif);font-size:155px;line-height:1;color:#8bbfe2;text-shadow:12px 15px 0 #ffffff74}.life-drums .life-symbol{font-size:180px;color:#84acd3;transform:translate(-50%,-50%) rotate(7deg)}.life-travel .life-symbol{color:#a1cfee;font-size:165px}.life-placeholder{position:absolute;left:22px;bottom:20px;font-size:9px;font-weight:800;letter-spacing:.13em;color:#86a6bf}.life-art.has-photo img{width:100%;height:100%;object-fit:cover;display:block}.life-card-footer{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8ee;padding:21px 2px}.life-card-footer h3{font-size:19px;letter-spacing:-.025em;margin:0 0 9px}.life-card-footer p{font-size:11px;color:#99a7b3;margin:0}.life-card-footer>span{color:#7baaca}.atlas-card{margin-top:60px;background:#e9f5fe;min-height:360px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}.atlas-text{padding:52px 60px}.atlas-label{font-size:10px;color:#75a0c0;letter-spacing:.15em;font-weight:850}.atlas-text h3{font-size:41px;letter-spacing:-.075em;margin:27px 0 15px}.atlas-text p{font-size:14px;line-height:1.9;color:#7891a8;max-width:400px}.atlas-country-list{margin-top:30px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}.atlas-country-list>span{font-size:11px;color:#7499b4}.atlas-country-list b{font-size:10px;background:white;padding:6px 9px;border-radius:5px;color:#497a9c}.atlas-empty{border:1px dashed #a6cee9;border-radius:30px;padding:10px 16px}.atlas-art{position:relative;min-height:340px;display:flex;align-items:center;justify-content:center}.atlas-globe{height:305px;width:305px;border-radius:50%;border:2px solid #94c7eb;position:relative;box-shadow:0 0 0 25px #badcf33c,0 0 0 70px #badcf326;background:radial-gradient(circle at 30% 25%,#ffffffa8,#b3d9f3ad 65%,#75b1dbab);transform:rotate(-12deg);overflow:hidden}.world-motif{font-size:170px;color:#76b6e1aa;position:absolute;left:66px;top:30px}.world-lat{position:absolute;border:1px solid #71a7c9;border-radius:50%;height:60px;left:5%;width:90%}.lat1{top:85px}.lat2{bottom:85px}.world-meridian{position:absolute;top:-2px;height:305px;width:155px;border:1px solid #71a7c9;border-radius:50%;left:75px}.mer2{transform:rotate(90deg)}.atlas-coordinate{position:absolute;right:28px;bottom:25px;font-size:9px;letter-spacing:.12em;color:#86afc8;font-weight:750}.life-quote{text-align:center;font-family:var(--serif);font-style:italic;font-size:21px;color:#7797b4;margin-top:60px}.life-quote span{color:#8bc3eb;padding-left:10px}
+/* Contact */
+.contact{background:#152d44;color:white;overflow:hidden}.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}.contact h2{font-size:clamp(70px,8.5vw,130px);line-height:1.03;letter-spacing:-.09em;font-weight:630;margin:31px 0 27px}.contact h2 em{font-family:var(--serif);font-style:italic;color:#97cff5;font-weight:400}.contact-grid>div>p{color:#b2c7da;font-size:15px;line-height:1.9;max-width:530px}.contact-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}.btn-accent{background:#a8d9f8;color:#1e4868}.btn-accent:hover{background:#c6e9ff}.btn-glass{border:1px solid #617e96;color:#e3edf5;background:transparent}.btn-glass:hover{background:#294560}.contact-side{display:flex;flex-direction:column;align-items:center}.contact-flower{font-size:255px;color:#3b6484;line-height:.95;animation:rotate 55s linear infinite}.contact-side>a{font-family:var(--serif);font-style:italic;font-size:21px;color:#a6d6f6;display:flex;gap:13px;align-items:center;margin-top:-20px;position:relative;z-index:2}.contact-side>a:hover{text-decoration:underline}.contact-side>span{font-size:9px;letter-spacing:.12em;color:#698ca9;margin-top:25px}@keyframes rotate{to{transform:rotate(360deg)}}.footer{background:#10263a;color:#87a0b5}.footer-content{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-logo{font-family:Georgia,serif;font-size:34px;font-weight:850;letter-spacing:-.09em;color:white}.footer-logo span{color:#8dd0f7}.footer-content>span{font-size:11px}.footer-content>a:last-child{font-size:11px;color:#adc8dc}
+/* Modal */
+.modal-open{overflow:hidden}.modal-backdrop{position:fixed;inset:0;z-index:100;background:#102c43d4;backdrop-filter:blur(8px);display:flex;justify-content:center;align-items:center;padding:20px;animation:fadein .15s}.modal{background:#fff;border-radius:12px;overflow:auto;width:min(800px,100%);max-height:92vh;position:relative;box-shadow:0 35px 100px #081a2aa0}.modal-close{z-index:2;position:sticky;float:right;top:15px;right:15px;margin:15px 15px -56px 0;background:#ffffffee;border:1px solid #d3e3ef;width:39px;height:39px;border-radius:50%;display:grid;place-items:center}.modal-graphic{height:280px}.modal-body{padding:36px 42px 40px}.modal-caption{font-size:10px;letter-spacing:.14em;font-weight:800;color:#75a0be}.modal-body h2{font-size:42px;letter-spacing:-.065em;margin:14px 0}.modal-intro{font-size:15px;color:#6f869b;line-height:1.8}.modal-detail{border-top:1px solid #e4edf5;margin-top:27px}.modal-detail>div{padding-top:23px}.modal-detail label{display:block;font-size:10px;letter-spacing:.15em;color:#7e9bb2;font-weight:850}.modal-detail p{font-size:13px;line-height:1.95;color:#5d7487}.modal-actions{margin-top:30px;padding-top:25px;border-top:1px solid #e4edf5;display:flex;justify-content:space-between;gap:20px;align-items:center}.no-public-link{font-size:11px;color:#8fa6b7}.modal-actions .btn{white-space:nowrap}@keyframes fadein{from{opacity:0}to{opacity:1}}
+/* Responsive */
+@media(max-width:1230px){.wrap{width:calc(100% - 84px)}.main-nav{gap:16px}.brand-name{font-size:10px}.hero{gap:20px}.hero h1{font-size:clamp(53px,6.8vw,88px)}.about-grid,.research-grid{gap:65px}.experience-layout{gap:60px}.cosmos-center{height:250px;width:250px}.orbit-one{height:355px;width:355px}.orbit-two{height:210px;width:450px}.project-graphic{height:285px}}
+@media(max-width:990px){.main-nav{display:none;position:absolute;top:87px;left:0;right:0;background:#f7faff;padding:18px 42px 25px;flex-direction:column;gap:0;box-shadow:0 20px 32px #243c541a;border-bottom:1px solid #dde8f1;align-items:stretch}.main-nav.open{display:flex}.main-nav a{padding:13px 0;border-bottom:1px solid #e3edf4;font-size:13px}.menu-button{display:flex}.header-email{display:none}.hero{min-height:680px}.hero h1{font-size:clamp(48px,6vw,68px)}.hero-intro{font-size:14px}.hero-visual{height:475px}.cosmos-center{width:210px;height:210px}.cosmos-center strong{font-size:32px}.orbit-one{height:300px;width:300px}.orbit-two{width:370px;height:170px}.ticket-top{right:-6%}.ticket-bottom{left:-2%}.about-grid,.research-grid{gap:38px}.about .section-title{font-size:50px}.project-title-row h3{font-size:26px}.project-graphic{height:245px}.hbti-big{font-size:90px}.nbati-sticker{transform:scale(.83) rotate(13deg)}.life-art{height:255px}.life-symbol{font-size:115px}.award-rows{min-height:0}.experience-layout{grid-template-columns:.9fr 1.1fr}.contact h2{font-size:76px}.contact-flower{font-size:190px}}
+@media(max-width:700px){.wrap{width:calc(100% - 42px)}.site-header{height:72px}.main-nav{top:71px;padding:10px 21px 22px}.brand-icon{width:40px;height:40px;font-size:24px;border-radius:11px}.brand-name{font-size:10px}.brand-name i{display:none}.header-actions{gap:5px}.hero{min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:55px 0 85px}.hero-overline{font-size:9px}.hero-hello{font-size:14px;margin-top:36px}.hero h1{font-size:clamp(52px,10.5vw,75px);margin:17px 0 26px}.hero-intro{font-size:14px;max-width:500px}.hero-buttons{gap:10px}.btn{height:48px;padding:0 16px;font-size:11px;gap:13px}.hero-location{margin-top:29px}.hero-visual{height:370px;width:100%;margin-top:15px}.hero-graphic{max-width:440px}.cosmos-center{width:205px;height:205px}.orbit-one{height:300px;width:300px}.orbit-two{height:160px;width:360px}.ticket-top{right:4%;top:15%;transform:rotate(9deg) scale(.84)}.ticket-bottom{left:3%;bottom:14%;transform:rotate(-8deg) scale(.84)}.cosmos-corner{bottom:1%}.hero-handnote{display:none}.scroll-cue{bottom:25px}.ticker{height:47px}.ticker>div{font-size:9px;min-width:1100px}.section{padding:82px 0}.section-title{font-size:clamp(45px,9vw,65px)}.about-grid,.research-grid,.experience-layout{grid-template-columns:1fr}.about .section-title{font-size:clamp(44px,9vw,60px)}.about-paragraphs{margin-top:23px}.about-paragraphs p{font-size:14px;line-height:1.95}.about-aside{padding-top:0;gap:14px}.education-card{min-height:250px}.education-card h3{margin-top:50px}.quote-card p{font-size:24px}.section-header,.life-header{display:block}.section-header>p,.life-header>p{margin-top:20px;max-width:100%}.filters{gap:7px}.filter{padding:9px 12px;font-size:10px}.project-grid,.awards-grid,.life-cards{grid-template-columns:1fr;gap:17px}.project-graphic{height:250px}.project-body{padding:23px}.project-title-row h3{font-size:27px}.project-body>p{min-height:0;font-size:13px}.project-bottom{padding-top:18px}.fbti-type{font-size:47px}.hbti-big{font-size:102px}.award-group:last-child{grid-column:auto;max-width:100%}.award-group{margin-top:6px}.award-row{grid-template-columns:60px minmax(0,1fr) auto}.experience-list{padding-top:0}.experience-sketch{display:none}.research-orbit{display:none}.research-lead>p{margin:24px 0}.research-list{padding-top:0}.research-topic h3{font-size:24px}.life-header{margin-bottom:30px}.life-art{height:245px}.life-symbol{font-size:130px}.life-card-footer{padding:15px 2px}.life-card-footer h3{font-size:19px}.atlas-card{margin-top:38px;grid-template-columns:1fr}.atlas-text{padding:35px 27px 10px}.atlas-text h3{margin:16px 0 12px;font-size:36px}.atlas-art{min-height:280px}.atlas-globe{height:220px;width:220px;box-shadow:0 0 0 22px #badcf33c,0 0 0 50px #badcf326}.world-motif{font-size:125px;left:44px;top:27px}.world-lat{height:50px}.lat1{top:60px}.lat2{bottom:60px}.world-meridian{width:110px;height:220px;left:55px}.life-quote{font-size:18px;margin-top:38px}.contact-grid{grid-template-columns:1fr;gap:5px}.contact h2{font-size:clamp(61px,11vw,88px)}.contact-side{min-height:220px}.contact-flower{font-size:205px}.contact-side>a{font-size:18px}.footer-content{flex-wrap:wrap;padding:22px 0;min-height:0}.footer-content>span{order:3;flex:0 0 100%;font-size:10px}.modal-backdrop{padding:8px}.modal-graphic{height:215px}.modal-body{padding:24px}.modal-body h2{font-size:31px}.modal-actions{flex-direction:column;align-items:flex-start}.modal-actions .btn{width:100%}}
+@media(max-width:390px){.wrap{width:calc(100% - 32px)}.brand-name{font-size:9px}.language-toggle{padding:0 9px}.hero h1{font-size:clamp(43px,11.7vw,54px)}.hero-buttons .btn{padding:0 13px;font-size:10px}.hero-visual{height:335px}.cosmos-center{width:177px;height:177px}.cosmos-center strong{font-size:27px}.cosmos-center small{font-size:6px}.orbit-one{width:260px;height:260px}.orbit-two{width:310px;height:145px}.cosmos-ticket{padding:10px 11px}.ticket-top{right:-6%}.ticket-bottom{left:-6%}.project-bottom{align-items:flex-start;flex-direction:column}.art-fbti .fbti-type{font-size:38px}.hbti-big{font-size:78px}.art-nbati>strong{font-size:79px}.award-row{grid-template-columns:52px minmax(0,1fr) auto;gap:7px}.award-name{font-size:11px}.award-result{font-size:9px;padding:4px 6px}.contact h2{font-size:59px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* V3 — editorial single-column projects and awards, English-first personal website */
+.projects{background:#f0f7fd}
+.projects .section-header{margin-bottom:42px}
+.project-grid{display:flex;flex-direction:column;gap:0;border-top:1px solid #d2e3f2}
+.project-card{position:relative;display:grid;grid-template-columns:44px minmax(220px,280px) minmax(0,1fr);align-items:center;gap:28px;padding:30px 0;background:transparent;border:0;border-bottom:1px solid #d2e3f2;border-radius:0;overflow:visible;transition:none}
+.project-card:hover{transform:none;box-shadow:none}
+.project-index{font-size:14px;letter-spacing:-.02em;font-weight:850;color:#467fa9;align-self:start;padding-top:12px;white-space:nowrap}
+.project-index span{font-size:10px;font-weight:700;color:#acc6d9}
+.project-graphic{height:218px;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px #244b6c0d}
+.project-graphic>.art-bg{border-radius:12px}
+.project-body{padding:1px 0;min-width:0;gap:0}
+.project-category{font-size:10px;font-weight:800;letter-spacing:.13em;color:#6297bb}
+.project-title-row{align-items:center;justify-content:flex-start;gap:18px;flex-wrap:wrap;margin:2px 0 6px}
+.project-title-row h3{font-size:clamp(23px,2.5vw,34px);font-weight:800;letter-spacing:-.05em;margin:10px 0 5px;color:#172f48}
+.project-role{padding:5px 9px;background:#e1f1fc;color:#3679a8;border-radius:4px;font-size:10px;white-space:nowrap;font-weight:800}
+.project-body>p.project-description{font-size:13px;line-height:1.82;color:#50677e;min-height:0;max-width:750px;margin:7px 0 8px}
+.project-body>p.project-note{font-size:11.5px;line-height:1.7;color:#7d94a7;min-height:0;max-width:750px;margin:0 0 7px}
+.project-bottom{margin-top:7px;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.project-actions{display:flex;align-items:center;gap:20px;flex:none}
+.project-actions .simple-link{font-size:11px;font-weight:800;white-space:nowrap}
+.project-live{color:#2579b5}
+.project-tags{gap:5px}
+.project-tags span{font-size:9.5px;padding:5px 8px}
+/* One awards section per row. A darker/heavier event name establishes hierarchy. */
+.awards-grid{display:flex;flex-direction:column;gap:0;border-top:1px solid #d6e4ef}
+.award-group,.award-group:last-child{display:grid;grid-template-columns:225px minmax(0,1fr);gap:20px;max-width:none;grid-column:auto;border-top:0;border-bottom:1px solid #d6e4ef;margin:0;padding:22px 0 27px}
+.award-group-title{align-items:flex-start;padding:10px 10px 0 0;gap:12px}
+.award-group-title h3{font-size:16px;font-weight:800;color:#29465f;line-height:1.4}
+.award-symbol{flex:none}
+.award-count{display:none}
+.award-row{grid-template-columns:75px minmax(0,1fr) minmax(104px,auto);gap:20px;align-items:center;padding:18px 12px 18px 2px;border-bottom:1px solid #e3edf5}
+.award-row:last-child{border-bottom:0}
+.award-year{font-size:12px;font-weight:800;color:#7196b5;padding-top:0}
+.award-name{font-size:15.5px;font-weight:800;line-height:1.5;color:#192f47;letter-spacing:-.018em}
+.award-result{justify-self:end;font-size:11px;padding:8px 12px;background:#d9ecfc;color:#205d8b;font-weight:850;border:1px solid #c3e1f7;border-radius:5px}
+.award-arrow{justify-self:end;color:#acc4d8}
+@media(max-width:1130px){
+ .project-card{grid-template-columns:36px minmax(170px,240px) minmax(0,1fr);gap:19px}
+ .project-graphic{height:196px}
+ .project-title-row h3{font-size:25px}
+ .project-bottom{align-items:flex-start;flex-direction:column}
+ .award-group,.award-group:last-child{grid-template-columns:190px minmax(0,1fr)}
+}
+@media(max-width:760px){
+ .projects .section-header{margin-bottom:27px}
+ .project-card{display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:27px 0}
+ .project-index{align-self:flex-start;padding:0}
+ .project-graphic{height:220px;max-width:none}
+ .project-body{padding:2px 0 0}
+ .project-title-row h3{font-size:27px}
+ .project-body>p.project-description{font-size:13px;margin-top:4px}
+ .project-bottom{flex-direction:column;align-items:stretch;gap:14px}
+ .project-actions{flex-wrap:wrap;gap:20px}
+ .award-group,.award-group:last-child{display:block;padding:25px 0 20px}
+ .award-group-title{padding:0 0 10px}
+ .award-row{grid-template-columns:57px minmax(0,1fr);gap:6px 10px;align-items:start;padding:17px 0}
+ .award-year{padding-top:3px;font-size:11px}
+ .award-name{font-size:14.5px}
+ .award-result,.award-arrow{grid-column:2;justify-self:start;margin-top:2px}
+ .award-result{font-size:10px;padding:5px 10px}
+}
+/* Stretch each award category across the complete content width. */
+.awards-grid{align-items:stretch}
+@media(max-width:700px){
+  .hero h1{white-space:normal;font-size:clamp(42px,9.5vw,66px);line-height:1.12}
+}
+
+/* V4: Chronological awards with full competition names, category tags,
+   and a plain inline award result (no blue medal/prize boxes). */
+.competitions .section-header.compact{margin-bottom:30px}
+.awards-grid.timeline-list{display:flex;flex-direction:column;gap:0;border-top:1px solid #d6e4ef;align-items:stretch}
+.timeline-list .award-row{
+ display:grid;grid-template-columns:98px minmax(0,1fr);gap:22px;
+ width:100%;padding:21px 4px 21px 2px;border-bottom:1px solid #e1eaf2;
+ align-items:baseline;
+}
+.timeline-list .award-row:hover{background:#f6fbff}
+.timeline-list .award-year{font-size:13px;font-weight:800;color:#7292ac;padding-top:3px;font-variant-numeric:tabular-nums}
+.timeline-list .award-details{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 11px;min-width:0}
+.timeline-list .award-name{font-size:16px;line-height:1.65;font-weight:850;letter-spacing:-.02em;color:#142b45}
+.timeline-list .award-category{
+ display:inline-flex;align-items:center;background:#e9f4fb;color:#477a9c;
+ font-size:10px;font-weight:750;line-height:1.5;padding:2px 7px;border-radius:4px;
+ white-space:nowrap;vertical-align:middle;
+}
+.timeline-list .award-result{
+ display:inline;justify-self:auto;background:transparent!important;border:0!important;
+ border-radius:0!important;padding:0!important;margin:0!important;
+ color:#4b6277;font-size:13px;font-weight:650;line-height:1.65;
+ white-space:normal;
+}
+.timeline-list .award-dash{color:#9aaebb;margin-right:2px}
+.timeline-list .award-row[data-category="participation"] .award-result{font-weight:500;color:#8496a8}
+.awards-footnote{line-height:1.8;max-width:850px}
+@media(max-width:760px){
+ .timeline-list .award-row{grid-template-columns:57px minmax(0,1fr);gap:10px;padding:18px 0}
+ .timeline-list .award-year{font-size:11px;padding-top:5px}
+ .timeline-list .award-name{font-size:14px;line-height:1.6}
+ .timeline-list .award-details{gap:4px 8px}
+ .timeline-list .award-result{font-size:12px}
+ .timeline-list .award-category{font-size:9px}
+}
+@media(max-width:390px){
+ .timeline-list .award-row{grid-template-columns:46px minmax(0,1fr);gap:7px}
+ .timeline-list .award-name{font-size:13px}
+}
+
+/* V5: Make the actual distinctions pop, without bringing back award boxes. */
+.timeline-list .award-result.award-distinction {
+  color:#143a5a; font-size:15px; font-weight:900; letter-spacing:-.015em;
+}
+.timeline-list .award-result.award-distinction strong{font-weight:900;}
+.timeline-list .award-emoji{display:inline-block;font-size:18px;line-height:1;vertical-align:-2px;margin-left:2px;}
+.timeline-list .award-result.award-participated{color:#8799a9;font-size:12px;font-weight:500;}
+.timeline-list .award-result.award-participated strong{font-weight:500;}
+@media(max-width:760px){
+ .timeline-list .award-result.award-distinction{font-size:13px;}
+ .timeline-list .award-emoji{font-size:16px;}
+ .timeline-list .award-result.award-participated{font-size:11px;}
+}
+
+
+
+/* V6.4: Restore V3 typography. The second headline retains its subtle blue underline. */
+.hero h1 em {
+  font-family:inherit;
+  font-size:inherit;
+  font-style:normal;
+  font-weight:inherit;
+  color:#6aabe0;
+  letter-spacing:-.085em;
+  background-image:linear-gradient(90deg,#b4ddf729,#a5d5f0ad 40%,#d4ecfb45);
+  background-position:3% 98%;
+  background-repeat:no-repeat;
+  background-size:94% .085em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+
+/* V6.5 · Algorithm blog section */
+.main-nav{gap:17px}
+.main-nav a{font-size:10.5px}
+.blog{background:#eef7ff;border-top:1px solid #e1effb;border-bottom:1px solid #e1effb}
+.blog-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.97fr);gap:9%;align-items:center}
+.blog-intro .section-title{font-size:clamp(47px,5.3vw,77px);letter-spacing:-.07em;line-height:1.17;margin:27px 0 26px}
+.blog-intro .section-title em{font-family:var(--serif);font-weight:500;letter-spacing:-.04em}
+.blog-desc{color:#6b8399;font-size:14px;line-height:2.08;max-width:500px;margin:0 0 29px}
+.blog-cta{display:inline-flex;align-items:center;gap:23px;background:#183b5a;color:white;border-radius:7px;padding:17px 22px;font-size:12px;font-weight:750;transition:transform .2s,background .2s}
+.blog-cta:hover{transform:translateY(-3px);background:#2f6794}
+.blog-cta span{font-size:17px}
+.blog-feature{background:white;border:1px solid #d3e6f7;border-radius:12px;overflow:hidden;box-shadow:0 25px 70px #4f92c118;transition:transform .2s,box-shadow .2s}
+.blog-feature:hover{transform:translateY(-4px);box-shadow:0 27px 72px #4f92c12d}
+.blog-feature-art{background:linear-gradient(140deg,#e0f2ff,#f7fbff);height:164px;display:grid;place-items:center;border-bottom:1px solid #e0edf8;overflow:hidden}
+.blog-feature-art svg{width:min(100%,480px);height:155px}
+.blog-feature-content{padding:29px 34px 31px}
+.blog-feature-label{font-size:10px;letter-spacing:.13em;font-weight:800;color:#6a9bba;margin-bottom:20px}
+.blog-feature-label span{color:#4c9fd5;font-size:16px;vertical-align:-1px;margin-right:8px}
+.blog-feature h3{font-size:clamp(25px,2.6vw,34px);line-height:1.25;letter-spacing:-.04em;color:#1a3553;margin:0 0 11px;font-weight:750}
+.blog-original{font-size:13px;color:#478fbd;margin:-2px 0 11px}
+.blog-feature-content>p{color:#72869c;font-size:13px;line-height:1.9;margin:0 0 27px}
+.blog-feature-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid #e3edf5;padding-top:18px}
+.blog-feature-foot span{font-size:10px;color:#9cadba}
+.blog-feature-foot a{font-size:11px;font-weight:800;color:#2f80b4;white-space:nowrap}
+.blog-feature-foot a:hover{text-decoration:underline;text-underline-offset:5px}
+@media(max-width:1160px){.main-nav{gap:12px}.main-nav a{font-size:10px}}
+@media(max-width:990px){.blog-layout{gap:34px;grid-template-columns:1fr}.blog-feature{max-width:720px}.blog-intro .section-title{font-size:clamp(44px,7vw,73px)}}
+@media(max-width:560px){.blog-feature-content{padding:25px 23px 27px}.blog-feature-art{height:130px}.blog-feature-art svg{height:130px}.blog-intro .section-title{font-size:clamp(38px,9.3vw,52px)}.blog-feature-foot{flex-wrap:wrap}.blog-feature-foot a{white-space:normal}}
+
+</style>
+  
+  
+</head>
+<body>
+<div id="app"></div>
+<script>
+/*
+ * William's editable portfolio data.
+ * To add photos, set lifePhotos paths to local files, e.g. 'images/basketball.jpg'.
+ * To add a visited country, append its real name to travelCountries; do not invent places.
+ * Both language variants are kept together so translations stay aligned.
+ */
+const SITE = {
+  email: 'wllw07@sjtu.edu.cn',
+  blogUrl:'https://blog.csdn.net/weixin_73113801',
+  featuredArticleUrl:'https://blog.csdn.net/weixin_73113801/article/details/130911664',
+  travelCountries: [],
+  lifePhotos: { basketball: '', drums: '', travel: '' },
+  projectData: [
+    { id:'fbti', kind:'ai', art:'fbti', link:'https://fbtiv2.pages.dev/',
+      zh:{ title:'FBTI 今日饭运', category:'AI 应用 · 生活', role:'独立开发', intro:'用 AI 解决每天都可能遇到的一个小问题：今天吃什么？', description:'围绕“今天吃什么”的决策需求，结合预算、口味、距离、天气等因素设计 AI 餐饮推荐产品；独立完成前端开发、大模型 API 接入、前后端联调及产品部署。', note:'获上海交大工研院青年 AI 创业者训练营一等奖（冠军）；独立参加第六届“海聚英才”全球创新创业大赛路演；参加美团 NoCode 黑客松。', tags:['AI 推荐','独立产品','已上线'] },
+      en:{ title:'FBTI · What to Eat?', category:'AI PRODUCT · LIFESTYLE', role:'Independent developer', intro:'An AI-powered answer to a surprisingly difficult daily question: what should I eat?', description:'Designed a dining recommendation product considering budget, preferences, distance, and weather. Independently built the frontend, connected the LLM API, integrated the application, and deployed it.', note:'First Prize (Champion), Youth AI Entrepreneurship Camp; presented independently at the 6th Haiju Yingcai entrepreneurship competition; participated in the Meituan NoCode Hackathon.', tags:['AI recommendations','Indie product','Live'] } },
+    { id:'summary', kind:'ai', art:'summary', link:'',
+      zh:{ title:'Summary Pilot', category:'AI 应用 · 教育', role:'独立开发', intro:'让高中英语主观题练习得到更及时、更有参考价值的反馈。', description:'针对高考英语主观题批改需求，开发 AI 辅助批改小程序；主动联系多位高中英语教师与学生开展需求调研，探索 AI 在真实教学场景中的应用。', note:'目前处于 Demo / MVP 探索阶段，尤其关注评分的可靠性、反馈质量与对独立思考的影响。', tags:['AI 教育','用户调研','开发中'] },
+      en:{ title:'Summary Pilot', category:'AI PRODUCT · EDUCATION', role:'Independent developer', intro:'Timely, useful feedback for high-school English writing practice.', description:'Developing an AI-assisted grading application for subjective English exam questions. Proactively interviewed teachers and students to understand real classroom needs and evaluate practical constraints.', note:'Demo/MVP exploration, with attention to scoring reliability, feedback quality, and students’ independent thinking.', tags:['AI for education','User research','In progress'] } },
+    { id:'hbti', kind:'interactive', art:'hbti', link:'https://hbti.pages.dev/',
+      zh:{ title:'HBTI 医院人格测试', category:'互动网站 · 医疗健康', role:'独立开发', intro:'把医疗场景与人格测试结合，做一个有趣的互动产品。', description:'借鉴 MBTI 趣味化交互形式，独立完成 HBTI 网站开发，实现二次问卷、用户数据入库及信息摘要导出等功能。', note:'相关项目获浦东新区人工智能创新应用竞赛“超级个体·医疗健康”专场训练营二等奖。', tags:['互动问卷','数据交互','已上线'] },
+      en:{ title:'HBTI · Hospital Personas', category:'INTERACTIVE WEB · HEALTH', role:'Independent developer', intro:'A playful personality experience inspired by a healthcare setting.', description:'Independently developed the HBTI site inspired by MBTI-style interactions, including a secondary questionnaire, data storage, and summary export.', note:'Related venture work received Second Prize in Pudong’s AI Innovation Application competition (Healthcare track).', tags:['Interactive quiz','Web app','Live'] } },
+    { id:'nbati', kind:'interactive', art:'nbati', link:'https://nbati.pages.dev/',
+      zh:{ title:'NBATI 校园趣味产品', category:'互动网站 · 校园', role:'独立开发', intro:'从校园里的小小想法出发，做一款同学们愿意分享的产品。', description:'独立开发并上线校园趣味产品，上线前两天浏览量突破 10,000 次，在校园论坛广泛传播。', note:'这段经历让我第一次更直观地感受到：做出来的东西真的能被陌生人使用和分享。', tags:['校园产品','10,000+ 浏览','已上线'] },
+      en:{ title:'NBATI · Campus Fun', category:'INTERACTIVE WEB · CAMPUS', role:'Independent developer', intro:'A small campus idea that turned into something students wanted to share.', description:'Independently built and launched a playful campus web product, surpassing 10,000 views in its first two days and spreading through campus forums.', note:'A reminder that even small side projects can reach real people.', tags:['Campus project','10,000+ views','Live'] } },
+    { id:'star', kind:'research', art:'star', link:'',
+      zh:{ title:'上海市青少年明日科技之星', category:'科技探索 · 医学', role:'技术应用探索', intro:'在真实医学问题里接触计算技术的应用。', description:'在瑞金医院老师指导下，参与肝癌预测技术的应用落地，并参加上海市青少年明日科技之星比赛。', note:'这是早期医学与技术交叉探索经历，未将其表述为独立科研论文成果。', tags:['医学交叉','预测技术','早期探索'] },
+      en:{ title:'Tomorrow’s Science Star', category:'EXPLORATION · MEDICAL TECH', role:'Technology application exploration', intro:'An early opportunity to explore computational technology in medicine.', description:'Under guidance from a mentor at Ruijin Hospital, participated in exploring practical applications of liver-cancer prediction technology and joined the Shanghai Tomorrow’s Science Star competition.', note:'An early cross-disciplinary experience rather than a published research result.', tags:['Medical technology','Prediction','Exploration'] } },
+    { id:'robocup', kind:'robotics', art:'robot', link:'',
+      zh:{ title:'RoboCup SRC 技术挑战赛', category:'机器人 · 软件', role:'机器人程序设计与调试', intro:'让算法从屏幕走进真实机器人。', description:'负责机器人程序的设计、开发与调试；所在队伍获 2026 年上海交通大学 RoboCup SRC 暑期集训暨校内技术挑战赛季军。', note:'在硬件和软件的结合中学习控制、调试与团队协作。', tags:['机器人','程序开发','团队季军'] },
+      en:{ title:'RoboCup SRC Challenge', category:'ROBOTICS · SOFTWARE', role:'Robot programming & debugging', intro:'Taking software from the screen into the physical world.', description:'Contributed to robot software design, development, and debugging. Our team placed third in the 2026 SJTU RoboCup SRC summer technical challenge.', note:'Exploring control, debugging, and teamwork across hardware and software.', tags:['Robotics','Software','Team 3rd place'] } }
+  ],
+  awards: {
+    algorithms: [
+      { year:'2026',featuredPosition:2,zh:'中国大学生程序设计竞赛（CCPC）· 长春站',en:'CCPC — China Collegiate Programming Contest · Changchun Regional',zhResult:'铜牌',enResult:'Bronze Medal' },
+      { year:'2026',featuredPosition:3,zh:'中国大学生程序设计竞赛（CCPC）· 上海市赛',en:'CCPC — China Collegiate Programming Contest · Shanghai Municipal Contest',zhResult:'银牌',enResult:'Silver Medal' },
+      { year:'2024',zh:'上海市高三信息学竞赛',en:'Shanghai Senior-Year Informatics Competition',zhResult:'二等奖',enResult:'Second Prize' },
+      { year:'2023',zh:'全国青少年信息学奥林匹克联赛（NOIP）',en:'NOIP — National Olympiad in Informatics in Provinces',zhResult:'二等奖',enResult:'Second Prize' },
+      { year:'2023',zh:'CCF 非专业级软件能力认证提高组（CSP-S）',en:'CSP-S — Certified Software Professional Senior',zhResult:'一等奖',enResult:'First Prize' },
+      { year:'2022',zh:'全国青少年信息学奥林匹克联赛（NOIP）',en:'NOIP — National Olympiad in Informatics in Provinces',zhResult:'二等奖',enResult:'Second Prize' }
+    ],
+    math: [
+      { year:'2026',zh:'美国大学生数学建模竞赛（MCM/ICM）',en:'COMAP Mathematical / Interdisciplinary Contest in Modeling (MCM/ICM)',zhResult:'三等奖',enResult:'Third Prize' },
+      { year:'2022',zh:'美国数学竞赛（AMC）',en:'AMC — American Mathematics Competitions',zhResult:'前 5% 奖',enResult:'Top 5% Award' }
+    ],
+    robotics: [{year:'2026',zh:'上海交通大学 RoboCup SRC 暑期集训暨校内技术挑战赛',en:'Shanghai Jiao Tong University RoboCup SRC Summer Technical Challenge',zhResult:'团队季军',enResult:'Team 3rd Place'}],
+    products: [
+      { year:'2026',featuredPosition:1,zh:'上海交大工研院青年 AI 创业者训练营（第三期）',en:'Youth AI Entrepreneurship Camp (Cohort III)',zhResult:'一等奖（冠军）',enResult:'First Prize (Champion)' },
+      { year:'2026',zh:'浦东新区 AI 创新应用竞赛医疗健康专场训练营',en:'Pudong AI Innovation Application Competition (Healthcare)',zhResult:'二等奖',enResult:'Second Prize' },
+      { year:'2026',zh:'AI Hackathon Tour 高校联赛',en:'AI Hackathon Tour University League',zhResult:'复赛入围奖',enResult:'Second-Round Selection' }
+    ],
+    participation: [
+      { year:'2026',zh:'RoboMaster 校内赛',en:'RoboMaster Campus Competition' },
+      { year:'2025–2026',zh:'HPC 高性能计算比赛',en:'HPC — High-Performance Computing Competitions' },
+      { year:'2025',zh:'华为 ICT 创新赛',en:'Huawei ICT — Information and Communications Technology Innovation Competition' },
+      { year:'2025',zh:'华为 ModelEngine AI 创新训练营',en:'Huawei ModelEngine AI Innovation Camp' }
+    ]
+  },
+  languages: {
+    zh: {
+      nav:{about:'关于我',projects:'项目',competitions:'竞赛',experience:'实习',research:'科研',blog:'博客',life:'生活',contact:'联系'},
+      hero:{tiny:'个人主页 · 2026',hello:'你好，我是王籽阳',line1:'保持好奇，',line2:'动手创造。',intro:'上海交通大学本科生。喜欢人工智能、机器人和新鲜的想法，也喜欢把想法做成真正可以用的东西。',projects:'看看我的项目',about:'认识我',location:'上海 · 中国',scribble:'还在不断探索中',scroll:'向下探索'},
+      about:{eyebrow:'01 / ABOUT ME',title1:'走过不同的路，',title2:'保持同一种好奇。',paragraphs:['从信息学竞赛到医学技术，再到机械工程，我一直在尝试理解不同领域里的问题。编程让我享受解决难题，产品开发让我看到想法变成现实。','我希望不断接触新的知识、认识有趣的人，找到真正热爱且愿意长期投入的方向。对我来说，生活的意义始终包括探索、创造，以及拥有更多选择的自由。'],school:'上海交通大学',schoolSub:'机械与动力工程学院 · 本科在读',before:'曾就读于医学院医学影像技术专业',tags:['AI & Machine Learning','Product Building','Curiosity'],mottoLabel:'一句喜欢的话',motto:'Que sera, sera.'},
+      projects:{eyebrow:'02 / THINGS I BUILD',title:'做过的项目',desc:'一些认真做过的作品，一些还在探索中的想法。每个项目背后都有故事。',all:'全部',ai:'AI 产品',interactive:'互动网站',robotics:'机器人',research:'技术探索',detail:'项目详情',visit:'查看项目',role:'我的角色',what:'项目介绍',more:'更多背景',noLink:'暂无公开链接',close:'关闭详情'},
+      competitions:{eyebrow:'03 / COMPETITIONS',title:'竞赛与荣誉',desc:'按时间由近到远排列，2026 年个别重点奖项暂时置顶，其余同年成果按等级展示。',algorithms:'算法与程序设计',math:'数学建模与竞赛',robotics:'机器人',products:'产品与创新',participation:'技术活动与参与',foot:'“参与”仅表示参加活动，不代表获得奖项。CSP-S 的 2023 年奖项称谓按旧简历保留，需与原始证书核对。'},
+      experience:{eyebrow:'04 / EXPERIENCE',title:'实习与实践',desc:'更喜欢在真实团队和真实问题中学习。',items:[{title:'心路探索（上海）有限公司',role:'产品开发实习',desc:'参与 AI 心理健康 App 的功能开发、测试与迭代，接触 AI 产品从需求到落地的开发流程。',tag:'AI PRODUCT DEVELOPMENT'},{title:'医疗健康初创企业',role:'创业实践 · 合伙人及技术部成员',desc:'参与医疗健康初创企业的创业实践，作为企业合伙人及技术部成员参与产品研发与迭代，包括 HBTI 等产品相关工作。',tag:'HEALTHCARE STARTUP'}]},
+      research:{eyebrow:'05 / RESEARCH EXPLORATION',title1:'对未知的兴趣，',title2:'比答案更多。',desc:'我的科研经历还在起步阶段。比起急于给自己贴上“研究者”的标签，我更希望踏实学习基础知识，读论文，尝试实验，并找到值得长期钻研的问题。',items:[{no:'01',title:'医学诊断 Agent · MIRA',desc:'参与医学诊断 Agent（MIRA）相关科研探索，在导师指导下进行论文阅读、文献整理、学术汇报与讨论，目前尚未形成独立科研成果。'},{no:'02',title:'医学影像与医学技术',desc:'此前就读于医学院医学影像技术专业，接触医学影像与医学技术领域，并参与过医学预测技术的应用探索。'},{no:'03',title:'AI 前沿与机器人',desc:'关注机器学习、深度学习、智能 Agent，以及 AI 与机器人、真实世界系统相结合的方向。'}],note:'研究兴趣与探索记录 · 不是论文发表清单'},
+      blog:{eyebrow:'06 / ALGORITHM NOTES',title1:'算法，也值得',title2:'认真写下来。',desc:'我会把算法学习、图论知识和竞赛题解写成笔记，尝试从思路和原理出发，把复杂的问题讲清楚。更多文章持续更新在 CSDN。',platform:'CSDN BLOG · ALGORITHM JOURNAL',blogAction:'访问我的博客',featuredLabel:'FEATURED ARTICLE · 图论',featuredTitle:'浅谈 Tarjan 算法',featuredDesc:'从 DFS 生成树入手，梳理桥、割点和强连通分量等图论知识，并附有实现思路与示例。',read:'阅读这篇文章',remark:'以链接实际标题为准'},
+                  life:{eyebrow:'07 / BEYOND THE SCREEN',title:'认真创造，尽兴生活。',desc:'我喜欢旅行、篮球、飞盘、音乐和摄影。除了作品和奖项，也想在这里慢慢存放生活中值得记住的片刻。',basketball:'球场上的我',basketballSub:'篮球 / 运动 / 朋友',drums:'鼓点与节奏',drumsSub:'架子鼓 / 音乐 / 舞台',travel:'路上的风景',travelSub:'旅行 / 摄影 / 新体验',photoPlaceholder:'照片即将加入',mapEyebrow:'MY TRAVEL ATLAS',mapTitle:'走过的世界',mapDesc:'未来会在这里记录到过的国家与旅途故事。',mapEmpty:'旅行足迹待补充',mapVisited:'去过的国家',quote:'体验世界，也努力创造继续探索的自由。'},
+      contact:{eyebrow:'08 / CONTACT',title1:'有趣的想法？',title2:'聊聊吧。',desc:'无论是科研交流、项目合作，还是一次简单的聊天，都欢迎发邮件。',write:'发送邮件',copy:'复制邮箱',copied:'已复制',back:'回到顶部',footer:'以好奇心为起点，持续探索。'}
+    },
+    en: {
+      nav:{about:'About',projects:'Projects',competitions:'Awards',experience:'Experience',research:'Research',blog:'Blog',life:'Life',contact:'Contact'},
+      hero:{tiny:'PERSONAL SPACE · EST. 2026',hello:"Hi, I'm William Wang",line1:'Stay curious.',line2:'Make things happen.',intro:'An undergraduate at Shanghai Jiao Tong University. Exploring AI, robotics, and the joy of turning an idea into something real.',projects:'Explore my work',about:'About me',location:'Shanghai · China',scribble:'A work in progress',scroll:'SCROLL TO EXPLORE'},
+      about:{eyebrow:'01 / ABOUT ME',title1:'A winding path.',title2:'The same curiosity.',paragraphs:['I started with competitive programming, explored medical technology, and later moved into mechanical engineering. Algorithms taught me to enjoy hard problems; building products showed me what it feels like to make something real.','I want to keep learning, meet people with different perspectives, and find problems worth dedicating myself to. For me, a good life is about exploring, creating, and earning the freedom to choose what comes next.'],school:'Shanghai Jiao Tong University',schoolSub:'School of Mechanical Engineering · Undergraduate',before:'Previously studied Medical Imaging Technology',tags:['AI & Machine Learning','Product Building','Curiosity'],mottoLabel:'A LINE I KEEP COMING BACK TO',motto:'Que sera, sera.'},
+      projects:{eyebrow:'02 / THINGS I BUILD',title:'Selected Projects',desc:'Some ideas that became real things, and others that are still taking shape.',all:'All',ai:'AI Products',interactive:'Interactive Web',robotics:'Robotics',research:'Explorations',detail:'Read the story',visit:'Visit project',role:'MY ROLE',what:'ABOUT THE PROJECT',more:'MORE CONTEXT',noLink:'No public link yet',close:'Close project'},
+      competitions:{eyebrow:'03 / COMPETITIONS',title:'Awards & Challenges',desc:'Awards and technical activities, newest first. A few highlights are featured within the same year; the rest follow distinction level.',algorithms:'Algorithms & Programming',math:'Mathematics',robotics:'Robotics',products:'Products & Innovation',participation:'Technical Participation',foot:'Activities marked “Participated” are not awards. The 2023 CSP-S distinction follows the original résumé wording; please verify the official designation on the certificate.'},
+      experience:{eyebrow:'04 / EXPERIENCE',title:'Industry & Practice',desc:'Learning from real products, teams, and people.',items:[{title:'Xinlu Exploration (Shanghai) Co., Ltd.',role:'Product Development Intern',desc:'Contributed to implementation, testing, and iteration of an AI mental-health app, learning how product requirements translate into usable features.',tag:'AI PRODUCT DEVELOPMENT'},{title:'Healthcare Startup',role:'Startup Practice · Partner & Technical Team Member',desc:'Participated as a partner and technical team member in a healthcare startup, working on product development and iteration, including HBTI-related work.',tag:'HEALTHCARE STARTUP'}]},
+      research:{eyebrow:'05 / RESEARCH EXPLORATION',title1:'More questions.',title2:'Better experiments.',desc:"My research journey is still at an early stage. Rather than claim results I haven't earned, I'm working on fundamentals, reading papers, and looking for research directions I can pursue seriously.",items:[{no:'01',title:'Medical Diagnosis Agent · MIRA',desc:'Participated in early exploration of the medical diagnostic agent MIRA, primarily reading papers, reviewing related work, and giving academic presentations and discussions under mentorship. No independent research results claimed.'},{no:'02',title:'Medical Imaging & Technology',desc:'Previously studied Medical Imaging Technology and encountered medical imaging topics and practical applications of medical prediction technology.'},{no:'03',title:'Frontier AI & Robotics',desc:'Interested in machine learning, deep learning, intelligent agents, and the intersection of AI with robotics and real-world systems.'}],note:'RESEARCH INTERESTS AND LEARNING · NOT A PUBLICATION LIST'},
+      blog:{eyebrow:'06 / ALGORITHM NOTES',title1:'Thinking through',title2:'writing things down.',desc:'I write about algorithms, graph theory, and programming contest solutions — not just the answers, but the reasoning that gets us there. My articles live on CSDN.',platform:'CSDN BLOG · ALGORITHM JOURNAL',blogAction:'Explore my blog',featuredLabel:'FEATURED ARTICLE · GRAPH THEORY',featuredTitle:'A Closer Look at Tarjan’s Algorithm',featuredOriginal:'浅谈 Tarjan 算法',featuredDesc:'A walkthrough of DFS trees, bridges, articulation points, and strongly connected components, with explanations and implementation ideas.',read:'Read the article',remark:'Original article in Chinese'},
+      life:{eyebrow:'07 / BEYOND THE SCREEN',title:'Build seriously. Live fully.',desc:'I love traveling, basketball, frisbee, music, and photography. This space will grow into a collection of moments beyond projects and medals.',basketball:'On the Court',basketballSub:'Basketball / Sports / Friends',drums:'Keeping the Beat',drumsSub:'Drums / Music / Stage',travel:'Out in the World',travelSub:'Travel / Photography / Discovery',photoPlaceholder:'PHOTO COMING SOON',mapEyebrow:'MY TRAVEL ATLAS',mapTitle:'Places & Stories',mapDesc:'A future home for the countries I have visited and the experiences that shaped me.',mapEmpty:'Travel log coming soon',mapVisited:'Countries visited',quote:'Explore the world, and create the freedom to keep exploring.'},
+      contact:{eyebrow:'08 / CONTACT',title1:'Have an idea?',title2:"Let's talk.",desc:'Research discussions, collaborations, or just a good conversation—my inbox is open.',write:'Send an email',copy:'Copy email',copied:'Copied!',back:'Back to top',footer:'Built with curiosity, and still evolving.'}
+    }
+  }
+}
+
+</script>
+<script>
+(() => {
+  'use strict';
+  const $ = (selector,root=document)=>root.querySelector(selector);
+  const escapeHTML=(str)=>String(str).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safe=(str)=>escapeHTML(str??'');
+  const langFromStorage=()=>{try{return localStorage.getItem('william-lang-v3')==='zh'?'zh':'en'}catch{return 'en'}};
+  let lang=langFromStorage(), openId=null, menuOpen=false;
+  const icons={arrow:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>',out:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"/></svg>',globe:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 4-5 14 0 18M12 3c5 4 5 14 0 18"/></svg>',down:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg>',mail:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>',copy:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>',close:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>',menu:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'};
+  const navItems=['about','projects','competitions','experience','research','blog','life','contact'];
+  const eyebrow=(text,light=false)=>`<div class="eyebrow ${light?'eyebrow-light':''}"><span class="spark">✳</span>${safe(text)}</div>`;
+  const globeArt=`<div class="cosmos-grid"></div><div class="cosmos-orbit orbit-one"></div><div class="cosmos-orbit orbit-two"></div><div class="cosmos-center"><div class="cosmos-star">✳</div><strong>WHAT'S<br>NEXT<span>?</span></strong><small>CREATE · EXPLORE · REPEAT</small></div><div class="cosmos-ticket ticket-top"><i>01</i> <span>AI / IDEAS</span> <b>↗</b></div><div class="cosmos-ticket ticket-bottom"><i>02</i> <span>ROBOTS / REALITY</span> <b>↗</b></div><div class="cosmos-dot dot-one"></div><div class="cosmos-dot dot-two"></div><div class="cosmos-cross cross-one">+</div><div class="cosmos-cross cross-two">+</div><div class="cosmos-corner">WILLIAM'S LITTLE UNIVERSE <span>↗</span></div>`;
+  function art(project){
+    switch(project.art){
+      case 'fbti': return `<div class="art-bg art-fbti"><div class="visual-grid"></div><span class="art-mini">THE DAILY DECISION ENGINE</span><strong class="fbti-type">WHAT'S FOR<br>DINNER<span>?</span></strong><span class="food f1">🍜</span><span class="food f2">🥑</span><span class="food f3">🍣</span><div class="art-bottom">FOLLOW YOUR APPETITE <span>✳</span></div></div>`;
+      case 'summary':return `<div class="art-bg art-summary"><div class="paper-shadow"></div><div class="grade-sheet"><div class="grade-top">SUMMARY PILOT <span>AI · ENGLISH</span></div><b>Your writing,<br>made clearer.</b><div class="p-line l1"></div><div class="p-line l2"></div><div class="p-line l3"></div><div class="feedback-dot">✳</div><div class="feed-panel">↗ &nbsp; Thoughtful feedback</div></div><div class="score-chip">GOOD IDEA! <span>✦</span></div></div>`;
+      case 'hbti':return `<div class="art-bg art-hbti"><div class="visual-grid"></div><div class="hbti-top">HELLO, HUMAN.</div><strong class="hbti-big">HBTI<span>✳</span></strong><div class="hbti-small">FIND YOUR HOSPITAL PERSONA</div><div class="hbti-chip hc1">✺ Curious</div><div class="hbti-chip hc2">♥ Caring</div></div>`;
+      case 'nbati':return `<div class="art-bg art-nbati"><div class="nbati-ring n1"></div><div class="nbati-ring n2"></div><strong>NBATI<span>✳</span></strong><p>JUST FOR FUN.<br>SERIOUSLY.</p><div class="nbati-sticker"><b>10K+</b><small>EARLY VIEWS</small></div></div>`;
+      case 'duo':return `<div class="art-bg art-duo"><div class="diary-circle"></div><div class="diary d1"><small>01 / A NOTE TO YOU</small><b>Some stories<br>are better<br>shared.</b><i>♥</i></div><div class="diary d2"><small>02 / A NOTE TO ME</small><b>Let's write<br>ours together.</b><i>✳</i></div><div class="duo-bottom">TWO VOICES, ONE STORY.</div></div>`;
+      case 'star':return `<div class="art-bg art-star"><div class="star-orbit"></div><div class="star-symbol">✳</div><div class="star-copy"><small>TECHNOLOGY × MEDICINE</small><strong>CONNECTING<br>THE DOTS.</strong><span>CLINICAL QUESTIONS · COMPUTING</span></div></div>`;
+      case 'robot':return `<div class="art-bg art-robot"><div class="visual-grid"></div><div class="robot-top">ROBOCUP / SRC</div><svg class="robot-sketch" viewBox="0 0 320 220" fill="none" aria-hidden="true"><g stroke="#a4d5ff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M100 168h117l19 23H82l18-23Z"/><path d="M118 168v-45h83v45M130 123V96h58v27M149 96V65h20v31M159 65V40M148 40h22"/><path d="m119 135-26 21m107-21 26 21M136 141h46" stroke-dasharray="4 7"/><circle cx="111" cy="193" r="16"/><circle cx="208" cy="193" r="16"/></g><g stroke="#658eb5" stroke-width="1" stroke-dasharray="4 7"><path d="M49 30h225M49 207h225M51 22v191M270 22v191"/><circle cx="160" cy="124" r="88"/></g><circle cx="160" cy="40" r="5" fill="#d6f1ff"/></svg><div class="robot-foot">BUILD → CODE → DEBUG → REPEAT</div></div>`;
+      default:return '';
+    }
+  }
+  function projectCard(p,t,index,total){const d=p[lang];return `<article class="project-card project-${p.art}">
+    <div class="project-index">${String(index+1).padStart(2,'0')}<span> / ${String(total).padStart(2,'0')}</span></div>
+    <div class="project-graphic">${art(p)}</div>
+    <div class="project-body">
+      <div class="project-category"><span>${safe(d.category)}</span><span class="project-marker">✳</span></div>
+      <div class="project-title-row"><h3>${safe(d.title)}</h3><span class="project-role">${safe(d.role)}</span></div>
+      <p class="project-description">${safe(d.description)}</p>
+      <p class="project-note">${safe(d.note)}</p>
+      <div class="project-bottom"><div class="project-tags">${d.tags.map(tag=>`<span>${safe(tag)}</span>`).join('')}</div><div class="project-actions">${p.link?`<a class="simple-link project-live" href="${p.link}" target="_blank" rel="noopener noreferrer">${safe(t.visit)} ${icons.out}</a>`:''}<button class="simple-link" type="button" data-project="${p.id}">${safe(t.detail)} ${icons.arrow}</button></div></div>
+    </div></article>`}
+  /* Preserve award categories only as tags; chronology now controls the presentation.
+     No invented dates: calendar year is the available precision. For a range such as
+     2025–2026 we sort by its most recent year. Ties use medal/prize rank first. */
+  const awardCategories={
+    algorithms:{en:'Programming',zh:'算法竞赛'},
+    math:{en:'Mathematics',zh:'数学竞赛'},
+    robotics:{en:'Robotics',zh:'机器人'},
+    products:{en:'Innovation',zh:'创新创业'},
+    participation:{en:'Tech Activity',zh:'技术活动'}
+  };
+  function awardRank(item,key){
+    if(key==='participation')return 0;
+    const en=(item.enResult||'').toLowerCase();
+    if(en.includes('first prize')||en.includes('gold medal'))return 60;
+    if(en.includes('silver medal'))return 55;
+    if(en.includes('second prize'))return 50;
+    if(en.includes('bronze medal'))return 45;
+    if(en.includes('top 5%'))return 43;
+    if(en.includes('third place')||en.includes('3rd place'))return 40;
+    if(en.includes('third prize'))return 35;
+    if(en.includes('selection')||en.includes('finalist'))return 20;
+    return 10;
+  }
+  function awardTimeline(){
+    const result=[];let seq=0;
+    for(const [key,rows] of Object.entries(SITE.awards)){
+      for(const item of rows){
+        const years=String(item.year).match(/20\d\d/g)||[];
+        const latest=Math.max(0,...years.map(Number));
+        result.push({key,item,seq:seq++,latest,rank:awardRank(item,key)});
+      }
+    }
+    // Optional featuredPosition (1, 2, 3...) is only used WITHIN a year.
+    // Edit or remove it in source/content.js whenever the preferred order changes.
+    return result.sort((a,b)=>b.latest-a.latest
+      || (a.item.featuredPosition??999)-(b.item.featuredPosition??999)
+      || b.rank-a.rank || a.seq-b.seq);
+  }
+  /* Medal emojis for prizes; certificate emoji for top-5% and second-round selection.
+     Participation stays text-only. Champion is reserved for the entrepreneurship camp. */
+  function awardEmoji(item,key){
+    if(key==='participation')return '';
+    const r=(item.enResult||'').toLowerCase();
+    if(r.includes('champion'))return '🏆';
+    if(r.includes('gold medal')||r.includes('first prize'))return '🥇';
+    if(r.includes('silver medal')||r.includes('second prize'))return '🥈';
+    if(r.includes('bronze medal')||r.includes('third prize')||r.includes('third place')||r.includes('3rd place'))return '🥉';
+    if(r.includes('top 5%')||r.includes('second-round selection'))return '📜';
+    return '';
+  }
+  function awardTimelineMarkup(){return awardTimeline().map(({key,item})=>{
+    const category=item.en.startsWith('CSP-S')?(lang==='zh'?'能力认证':'Certification'):awardCategories[key][lang];
+    const result=key==='participation'?(lang==='zh'?'参与':'Participated'):(lang==='zh'?item.zhResult:item.enResult);
+    const emoji=awardEmoji(item,key);
+    const participation=key==='participation';
+    return `<div class="award-row" data-category="${key}" data-year="${safe(item.year)}">
+      <span class="award-year">${safe(item.year)}</span>
+      <div class="award-details"><span class="award-name">${safe(item[lang])}</span><span class="award-category">${safe(category)}</span><span class="award-result ${participation?'award-participated':'award-distinction'}"><span class="award-dash">—</span> <strong>${safe(result)}</strong>${emoji?` <span class="award-emoji" aria-hidden="true">${emoji}</span>`:''}</span></div>
+    </div>`;
+  }).join('')}
+  function lifeCard(key, title,subtitle,t,mark){const photo=SITE.lifePhotos[key];const hasPhoto=/^[\w./-]+\.(jpg|jpeg|png|webp)$/i.test(photo||'') && !photo.includes('..');return `<article class="life-card life-${key}"><div class="life-art ${hasPhoto?'has-photo':''}">${hasPhoto?`<img src="${escapeHTML(photo)}" alt="${safe(title)}" loading="lazy">`:`<span class="life-num">${mark}</span><span class="life-symbol">${key==='basketball'?'◉':key==='drums'?'♫':'✳'}</span><span class="life-placeholder">${safe(t.photoPlaceholder)}</span>`}</div><div class="life-card-footer"><div><h3>${safe(title)}</h3><p>${safe(subtitle)}</p></div><span>↗</span></div></article>`}
+  function mapMarkup(t){const countries=SITE.travelCountries;
+    return `<div class="atlas-card"><div class="atlas-text"><div class="atlas-label">✳ ${safe(t.mapEyebrow)}</div><h3>${safe(t.mapTitle)}</h3><p>${safe(t.mapDesc)}</p><div class="atlas-country-list">${countries.length?`<span>${safe(t.mapVisited)}:</span> ${countries.map(v=>`<b>${safe(v)}</b>`).join('')}`:`<span class="atlas-empty">${safe(t.mapEmpty)} ↗</span>`}</div></div><div class="atlas-art"><div class="atlas-globe"><span class="world-motif">✳</span><div class="world-lat lat1"></div><div class="world-lat lat2"></div><div class="world-meridian mer1"></div><div class="world-meridian mer2"></div></div><span class="atlas-coordinate">EXPLORING / 00° 00′</span></div></div>`;
+  }
+  function render(){const t=SITE.languages[lang];document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.title=lang==='zh'?'王籽阳 · William Wang — 个人主页':'William Wang · 王籽阳 — Personal Website';
+  $('#app').innerHTML=`<div id="top"></div><header class="site-header"><div class="wrap header-layout"><a href="#top" class="brand"><span class="brand-icon">W<span>.</span></span><span class="brand-name">WILLIAM WANG <i>/ 王籽阳</i></span></a><nav class="main-nav ${menuOpen?'open':''}" aria-label="Main navigation">${navItems.map(k=>`<a href="#${k}" data-nav="${k}">${safe(t.nav[k])}</a>`).join('')}</nav><div class="header-actions"><button class="language-toggle" type="button" id="lang-toggle" aria-label="${lang==='zh'?'Switch to English':'切换中文'}">${icons.globe}<span>${lang==='zh'?'EN':'中文'}</span></button><a class="header-email" href="mailto:${SITE.email}" aria-label="Email William">${icons.out}</a><button class="menu-button" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="${menuOpen}">${icons.menu}</button></div></div></header>
+  <main>
+    <section class="hero wrap" id="home"><div class="hero-copy"><div class="hero-overline"><span></span>${safe(t.hero.tiny)}</div><div class="hero-hello"><span class="mini-star">✳</span>${safe(t.hero.hello)}<span class="blue-stop">.</span></div><h1>${safe(t.hero.line1)}<br><em>${safe(t.hero.line2)}</em></h1><p class="hero-intro">${safe(t.hero.intro)}</p><div class="hero-buttons"><a href="#projects" class="btn btn-dark">${safe(t.hero.projects)} ${icons.out}</a><a href="#about" class="btn btn-outline">${safe(t.hero.about)} ${icons.arrow}</a></div><div class="hero-location"><span class="location-pin">⌖</span>${safe(t.hero.location)}</div></div><div class="hero-visual" aria-label="Creative abstract graphic, no portrait photograph"><div class="hero-graphic">${globeArt}</div><div class="hero-handnote"><span>✳</span>${safe(t.hero.scribble)}<svg viewBox="0 0 58 26"><path d="M3 19C15 23 29 1 54 8M45 3l9 5-5 9"/></svg></div></div><a class="scroll-cue" href="#about">${safe(t.hero.scroll)} ${icons.down}</a></section>
+    <div class="ticker"><div>OPEN QUESTIONS <span>✳</span> GOOD IDEAS <span>✳</span> MAKING THINGS <span>✳</span> OPEN QUESTIONS <span>✳</span> GOOD IDEAS <span>✳</span> MAKING THINGS <span>✳</span></div></div>
+    <section class="about section" id="about"><div class="wrap about-grid"><div>${eyebrow(t.about.eyebrow)}<h2 class="section-title">${safe(t.about.title1)}<br><em>${safe(t.about.title2)}</em></h2><div class="about-paragraphs">${t.about.paragraphs.map(x=>`<p>${safe(x)}</p>`).join('')}</div><div class="tag-cloud">${t.about.tags.map(x=>`<span>${safe(x)}</span>`).join('')}</div></div><div class="about-aside"><div class="education-card"><span class="education-icon">✳</span><div class="education-caption">EDUCATION / 2026</div><h3>${safe(t.about.school)}</h3><p>${safe(t.about.schoolSub)}</p><div class="education-prior">${safe(t.about.before)}</div><div class="education-brand">SJTU <span>↗</span></div></div><div class="quote-card"><span>${safe(t.about.mottoLabel)}</span><p>“${safe(t.about.motto)}”</p><div>∿∿∿∿∿</div></div></div></div></section>
+    <section class="projects section" id="projects"><div class="wrap"><div class="section-header"><div>${eyebrow(t.projects.eyebrow)}<h2 class="section-title">${safe(t.projects.title)}<span class="title-dot">.</span></h2></div><p>${safe(t.projects.desc)}</p></div><div class="project-grid">${['fbti','hbti','nbati','summary','star','robocup'].map(id=>SITE.projectData.find(p=>p.id===id)).filter(Boolean).map((p,i,arr)=>projectCard(p,t.projects,i,arr.length)).join('')}</div></div></section>
+    <section class="competitions section" id="competitions"><div class="wrap"><div class="section-header compact"><div>${eyebrow(t.competitions.eyebrow)}<h2 class="section-title">${safe(t.competitions.title)}<span class="title-dot">.</span></h2></div><p>${safe(t.competitions.desc)}</p></div><div class="awards-grid timeline-list">${awardTimelineMarkup()}</div><p class="awards-footnote">✳ ${safe(t.competitions.foot)}</p></div></section>
+    <section class="experience section" id="experience"><div class="wrap experience-layout"><div class="experience-lead">${eyebrow(t.experience.eyebrow)}<h2 class="section-title">${safe(t.experience.title)}<span class="title-dot">.</span></h2><p>${safe(t.experience.desc)}</p><div class="experience-sketch">∿<span>↗</span></div></div><div class="experience-list">${t.experience.items.map((x,i)=>`<article class="experience-item"><div class="experience-number">0${i+1} / EXPERIENCE</div><h3>${safe(x.title)}</h3><strong>${safe(x.role)}</strong><p>${safe(x.desc)}</p><div class="experience-tag">${safe(x.tag)} ${icons.out}</div></article>`).join('')}</div></div></section>
+    <section class="research section" id="research"><div class="wrap research-grid"><div class="research-lead">${eyebrow(t.research.eyebrow,true)}<h2 class="section-title">${safe(t.research.title1)}<br><em>${safe(t.research.title2)}</em></h2><p>${safe(t.research.desc)}</p><div class="research-orbit">✳</div></div><div class="research-list">${t.research.items.map(x=>`<article class="research-topic"><div class="research-top"><span>${safe(x.no)} / FOCUS</span><span>↗</span></div><h3>${safe(x.title)}</h3><p>${safe(x.desc)}</p></article>`).join('')}<div class="research-disclaimer">✳ ${safe(t.research.note)}</div></div></div></section>
+    <section class="blog section" id="blog"><div class="wrap blog-layout"><div class="blog-intro">${eyebrow(t.blog.eyebrow)}<h2 class="section-title">${safe(t.blog.title1)}<br><em>${safe(t.blog.title2)}</em></h2><p class="blog-desc">${safe(t.blog.desc)}</p><a class="blog-cta" href="${SITE.blogUrl}" target="_blank" rel="noopener noreferrer">${safe(t.blog.blogAction)} <span aria-hidden="true">↗</span></a></div><article class="blog-feature"><div class="blog-feature-art" aria-hidden="true"><svg viewBox="0 0 440 155" fill="none"><path d="M26 113L108 36L203 94L298 27L402 92" stroke="#7cbae8" stroke-width="2" stroke-dasharray="8 10"/><path d="M108 36L298 27M203 94L402 92" stroke="#a9cee9" stroke-width="1.5" opacity=".8"/><circle cx="26" cy="113" r="10" fill="#d4eafa" stroke="#70a9d9" stroke-width="2"/><circle cx="108" cy="36" r="13" fill="#a7d4f3" stroke="#5d9ccc" stroke-width="2"/><circle cx="203" cy="94" r="12" fill="#ebf7ff" stroke="#70a9d9" stroke-width="2"/><circle cx="298" cy="27" r="15" fill="#bcdff8" stroke="#5d9ccc" stroke-width="2"/><circle cx="402" cy="92" r="10" fill="#d4eafa" stroke="#70a9d9" stroke-width="2"/><text x="108" y="17" fill="#397bac" font-size="9" font-family="monospace" text-anchor="middle">DFS</text><text x="298" y="60" fill="#397bac" font-size="9" font-family="monospace" text-anchor="middle">LOW</text></svg></div><div class="blog-feature-content"><div class="blog-feature-label"><span>✳</span> ${safe(t.blog.featuredLabel)}</div><h3>${safe(t.blog.featuredTitle)}</h3>${t.blog.featuredOriginal?`<div class="blog-original">${safe(t.blog.featuredOriginal)}</div>`:''}<p>${safe(t.blog.featuredDesc)}</p><div class="blog-feature-foot"><span>${safe(t.blog.remark)}</span><a href="${SITE.featuredArticleUrl}" target="_blank" rel="noopener noreferrer">${safe(t.blog.read)} ↗</a></div></div></article></div></section>
+    <section class="life section" id="life"><div class="wrap">${eyebrow(t.life.eyebrow)}<div class="life-header"><h2 class="section-title">${safe(t.life.title)}</h2><p>${safe(t.life.desc)}</p></div><div class="life-cards">${lifeCard('basketball',t.life.basketball,t.life.basketballSub,t.life,'01')}${lifeCard('drums',t.life.drums,t.life.drumsSub,t.life,'02')}${lifeCard('travel',t.life.travel,t.life.travelSub,t.life,'03')}</div>${mapMarkup(t.life)}<div class="life-quote">“${safe(t.life.quote)}” <span>✳</span></div></div></section>
+    <section class="contact section" id="contact"><div class="wrap contact-grid"><div>${eyebrow(t.contact.eyebrow,true)}<h2>${safe(t.contact.title1)}<br><em>${safe(t.contact.title2)}</em></h2><p>${safe(t.contact.desc)}</p><div class="contact-buttons"><a class="btn btn-accent" href="mailto:${SITE.email}">${safe(t.contact.write)} ${icons.out}</a><button class="btn btn-glass" type="button" id="copy-email">${safe(t.contact.copy)} ${icons.copy}</button></div></div><div class="contact-side"><div class="contact-flower">✳</div><a href="mailto:${SITE.email}">${SITE.email} ${icons.out}</a><span>CONNECT / COLLABORATE / CREATE</span></div></div></section>
+  </main><footer class="footer"><div class="wrap footer-content"><a href="#top" class="footer-logo">W<span>.</span></a><span>© 2026 William Wang · ${safe(t.contact.footer)}</span><a href="#top">${safe(t.contact.back)} ↑</a></div></footer><div id="modal-mount"></div>`;
+    wire(); if(openId)openProject(openId);
+  }
+  function wire(){ $('#lang-toggle').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';try{localStorage.setItem('william-lang-v3',lang)}catch{}menuOpen=false;render()});
+    $('#menu-toggle').addEventListener('click',()=>{menuOpen=!menuOpen;$('.main-nav').classList.toggle('open',menuOpen);$('#menu-toggle').setAttribute('aria-expanded',String(menuOpen))});
+    document.querySelectorAll('[data-nav]').forEach(a=>a.addEventListener('click',()=>{menuOpen=false;$('.main-nav').classList.remove('open')}));
+    document.querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>openProject(b.dataset.project)));
+    $('#copy-email').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(SITE.email);const b=$('#copy-email');b.innerHTML=`${safe(SITE.languages[lang].contact.copied)} ✓`;setTimeout(()=>{const live=$('#copy-email');if(live)live.innerHTML=`${safe(SITE.languages[lang].contact.copy)} ${icons.copy}`},1900)}catch{window.location.href='mailto:'+SITE.email}});
+  }
+  function openProject(id){const p=SITE.projectData.find(v=>v.id===id);if(!p)return;openId=id;const t=SITE.languages[lang].projects,d=p[lang];const node=$('#modal-mount');node.innerHTML=`<div class="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title"><button type="button" class="modal-close" aria-label="${safe(t.close)}">${icons.close}</button><div class="modal-graphic">${art(p)}</div><div class="modal-body"><div class="modal-caption">${safe(d.category)}</div><h2 id="modal-project-title">${safe(d.title)}</h2><p class="modal-intro">${safe(d.intro)}</p><div class="modal-detail"><div><label>${safe(t.role)}</label><p>${safe(d.role)}</p></div><div><label>${safe(t.what)}</label><p>${safe(d.description)}</p></div><div><label>${safe(t.more)}</label><p>${safe(d.note)}</p></div></div><div class="modal-actions"><div class="project-tags">${d.tags.map(tag=>`<span>${safe(tag)}</span>`).join('')}</div>${p.link?`<a class="btn btn-dark" target="_blank" rel="noopener noreferrer" href="${p.link}">${safe(t.visit)} ${icons.out}</a>`:`<span class="no-public-link">${safe(t.noLink)}</span>`}</div></div></div></div>`;document.body.classList.add('modal-open');$('.modal-close').focus();$('.modal-close').addEventListener('click',closeModal);$('.modal-backdrop').addEventListener('click',e=>{if(e.target.classList.contains('modal-backdrop'))closeModal()});}
+  function closeModal(){openId=null;document.body.classList.remove('modal-open');const node=$('#modal-mount');if(node)node.innerHTML='';}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&openId)closeModal()});
+  render();
+})();
+
+</script>
+</body>
+</html>
