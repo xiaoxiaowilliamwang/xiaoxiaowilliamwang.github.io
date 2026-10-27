@@ -47,7 +47,7 @@
 .projects{background:#f0f7fd}
 .projects .section-header{margin-bottom:42px}
 .project-grid{display:flex;flex-direction:column;gap:0;border-top:1px solid #d2e3f2}
-.project-card{position:relative;display:grid;grid-template-columns:44px minmax(220px,280px) minmax(0,1fr);align-items:center;gap:28px;padding:30px 0;background:transparent;border:0;border-bottom:1px solid #d2e3f2;border-radius:0;overflow:visible;transition:none}
+.project-card{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;gap:28px;padding:30px 0;background:transparent;border:0;border-bottom:1px solid #d2e3f2;border-radius:0;overflow:visible;transition:none}
 .project-card:hover{transform:none;box-shadow:none}
 .project-index{font-size:14px;letter-spacing:-.02em;font-weight:850;color:#467fa9;align-self:start;padding-top:12px;white-space:nowrap}
 .project-index span{font-size:10px;font-weight:700;color:#acc6d9}
@@ -80,7 +80,7 @@
 .award-result{justify-self:end;font-size:11px;padding:8px 12px;background:#d9ecfc;color:#205d8b;font-weight:850;border:1px solid #c3e1f7;border-radius:5px}
 .award-arrow{justify-self:end;color:#acc4d8}
 @media(max-width:1130px){
- .project-card{grid-template-columns:36px minmax(170px,240px) minmax(0,1fr);gap:19px}
+ .project-card{grid-template-columns:36px minmax(0,1fr);gap:19px}
  .project-graphic{height:196px}
  .project-title-row h3{font-size:25px}
  .project-bottom{align-items:flex-start;flex-direction:column}
@@ -352,7 +352,6 @@ const SITE = {
   }
   function projectCard(p,t,index,total){const d=p[lang];return `<article class="project-card project-${p.art}">
     <div class="project-index">${String(index+1).padStart(2,'0')}<span> / ${String(total).padStart(2,'0')}</span></div>
-    <div class="project-graphic">${art(p)}</div>
     <div class="project-body">
       <div class="project-category"><span>${safe(d.category)}</span><span class="project-marker">✳</span></div>
       <div class="project-title-row"><h3>${safe(d.title)}</h3><span class="project-role">${safe(d.role)}</span></div>
@@ -452,7 +451,7 @@ const SITE = {
     document.querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>openProject(b.dataset.project)));
     $('#copy-email').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(SITE.email);const b=$('#copy-email');b.innerHTML=`${safe(SITE.languages[lang].contact.copied)} ✓`;setTimeout(()=>{const live=$('#copy-email');if(live)live.innerHTML=`${safe(SITE.languages[lang].contact.copy)} ${icons.copy}`},1900)}catch{window.location.href='mailto:'+SITE.email}});
   }
-  function openProject(id){const p=SITE.projectData.find(v=>v.id===id);if(!p)return;openId=id;const t=SITE.languages[lang].projects,d=p[lang];const node=$('#modal-mount');node.innerHTML=`<div class="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title"><button type="button" class="modal-close" aria-label="${safe(t.close)}">${icons.close}</button><div class="modal-graphic">${art(p)}</div><div class="modal-body"><div class="modal-caption">${safe(d.category)}</div><h2 id="modal-project-title">${safe(d.title)}</h2><p class="modal-intro">${safe(d.intro)}</p><div class="modal-detail"><div><label>${safe(t.role)}</label><p>${safe(d.role)}</p></div><div><label>${safe(t.what)}</label><p>${safe(d.description)}</p></div><div><label>${safe(t.more)}</label><p>${safe(d.note)}</p></div></div><div class="modal-actions"><div class="project-tags">${d.tags.map(tag=>`<span>${safe(tag)}</span>`).join('')}</div>${p.link?`<a class="btn btn-dark" target="_blank" rel="noopener noreferrer" href="${p.link}">${safe(t.visit)} ${icons.out}</a>`:`<span class="no-public-link">${safe(t.noLink)}</span>`}</div></div></div></div>`;document.body.classList.add('modal-open');$('.modal-close').focus();$('.modal-close').addEventListener('click',closeModal);$('.modal-backdrop').addEventListener('click',e=>{if(e.target.classList.contains('modal-backdrop'))closeModal()});}
+  function openProject(id){const p=SITE.projectData.find(v=>v.id===id);if(!p)return;openId=id;const t=SITE.languages[lang].projects,d=p[lang];const node=$('#modal-mount');node.innerHTML=`<div class="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title"><button type="button" class="modal-close" aria-label="${safe(t.close)}">${icons.close}</button><div class="modal-body"><div class="modal-caption">${safe(d.category)}</div><h2 id="modal-project-title">${safe(d.title)}</h2><p class="modal-intro">${safe(d.intro)}</p><div class="modal-detail"><div><label>${safe(t.role)}</label><p>${safe(d.role)}</p></div><div><label>${safe(t.what)}</label><p>${safe(d.description)}</p></div><div><label>${safe(t.more)}</label><p>${safe(d.note)}</p></div></div><div class="modal-actions"><div class="project-tags">${d.tags.map(tag=>`<span>${safe(tag)}</span>`).join('')}</div>${p.link?`<a class="btn btn-dark" target="_blank" rel="noopener noreferrer" href="${p.link}">${safe(t.visit)} ${icons.out}</a>`:`<span class="no-public-link">${safe(t.noLink)}</span>`}</div></div></div></div>`;document.body.classList.add('modal-open');$('.modal-close').focus();$('.modal-close').addEventListener('click',closeModal);$('.modal-backdrop').addEventListener('click',e=>{if(e.target.classList.contains('modal-backdrop'))closeModal()});}
   function closeModal(){openId=null;document.body.classList.remove('modal-open');const node=$('#modal-mount');if(node)node.innerHTML='';}
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&openId)closeModal()});
   render();
